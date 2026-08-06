@@ -4,24 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #121212;
             color: #ffffff;
             font-family: Arial, sans-serif;
         }
 
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         h1 {
             font-size: 3rem;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .project-card {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .project-card:hover {
+            background: #292929;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        .project-card p {
+            color: #cccccc;
         }
     </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+
+<header>
+    <div class="hero">
+        <h1>Hello World</h1>
+        <a href="#projects" class="scroll-btn">View Projects ↓</a>
+    </div>
+</header>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>A short description of your first project.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>A short description of your second project.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Three</h3>
+            <p>A short description of your third project.</p>
+        </div>
+    </section>
+
 </body>
 </html>
