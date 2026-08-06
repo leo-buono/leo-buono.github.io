@@ -75,3 +75,10 @@ section {
     background: #dddddd;
     transform: translateY(2px);
 }
+.project-card img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
