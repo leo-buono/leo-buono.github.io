@@ -53,6 +53,7 @@ section {
 .project-card p {
     color: #cccccc;
 }
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -75,6 +76,7 @@ section {
     background: #dddddd;
     transform: translateY(2px);
 }
+
 .project-card {
     display: flex;
     flex-direction: row;
@@ -121,4 +123,29 @@ section {
 .project-btn:hover {
     background: #dddddd;
     transform: translateY(2px);
+}
+
+.split-view {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+}
+
+.left {
+    width: 50%;
+    padding: 20px;
+    background: #121212;
+    text-align: right;
+}
+
+.right {
+    width: 50%;
+    padding: 20px;
+    background: #121212;
+}
+html,
+header {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
