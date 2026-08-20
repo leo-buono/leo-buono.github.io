@@ -33,27 +33,6 @@ section {
     padding-bottom: 10px;
 }
 
-.project-card {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: background 0.2s ease;
-}
-
-.project-card:hover {
-    background: #292929;
-}
-
-.project-card h3 {
-    margin-top: 0;
-}
-
-.project-card p {
-    color: #cccccc;
-}
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -77,22 +56,90 @@ section {
     transform: translateY(2px);
 }
 
+.project-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-tabs input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-tab-labels {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 6px;
+    width: fit-content;
+    background: #1a1a1a;
+    border: 1px solid #2f2f2f;
+    border-radius: 999px;
+}
+
+.project-tab-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    color: #cfcfcf;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.project-tab-label:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+#personal-projects-tab:checked ~ .project-tab-labels label[for="personal-projects-tab"],
+#work-projects-tab:checked ~ .project-tab-labels label[for="work-projects-tab"] {
+    background: #ffffff;
+    color: #121212;
+}
+
+.project-tab-panel {
+    display: none;
+    flex-direction: column;
+}
+
+#personal-projects-tab:checked ~ .personal-projects,
+#work-projects-tab:checked ~ .work-projects {
+    display: flex;
+}
+
 .project-card {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;
-
     background: #1e1e1e;
     border: 1px solid #333;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 25px;
+    transition: background 0.2s ease;
+}
+
+.project-card:hover {
+    background: #292929;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    color: #cccccc;
 }
 
 .project-image {
-    width: 250px;
-    height: 150px;
+    width: 315px;
+    height: 200px;
     flex-shrink: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -101,7 +148,8 @@ section {
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #121212;
 }
 
 .project-info {
@@ -124,7 +172,6 @@ section {
     background: #dddddd;
     transform: translateY(2px);
 }
-
 
 .split-view {
     display: flex;
@@ -166,4 +213,38 @@ header {
     margin: 0;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 720px) {
+    .project-tab-labels {
+        width: 100%;
+    }
+
+    .project-tab-label {
+        min-width: 0;
+        flex: 1 1 100%;
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .split-view {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
 }

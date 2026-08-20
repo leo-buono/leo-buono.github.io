@@ -20,45 +20,109 @@
             </div>
             <div class="right">
                 <a href="Projects/project1.html" target="_blank" class="project-btn">About Me</a>
-                <a href="Projects/project1.html" target="_blank" class="project-btn">View Projects</a>
                 <a href="Projects/project1.html" target="_blank" class="project-btn">Contact Me</a>
                 <a href="Projects/project1.html" target="_blank" class="project-btn">View Project</a>
                 <!-- <a href="Projects/project1.html" target="_blank" class="project-btn">View Project</a> -->
             </div>
         </div>
     </header>
-    <div></div>
     <div class="hero">
         <a href="#projects" class="scroll-btn">View Projects ↓</a>
     </div>
     <section id="projects" class="projects">
         <h2>Projects</h2>
 
-        <div class="project-card">
+        <div class="project-tabs">
+            <input type="radio" name="project-tab" id="personal-projects-tab" checked>
+            <input type="radio" name="project-tab" id="work-projects-tab">
 
-            <div class="project-image">
-                <img src="images/project1.png" alt="Project One Screenshot">
+            <div class="project-tab-labels" role="tablist" aria-label="Project categories">
+                <label for="work-projects-tab" class="project-tab-label">Work Projects</label>
+                <label for="personal-projects-tab" class="project-tab-label">Personal Projects</label>
             </div>
 
-            <div class="project-info">
-                <h3>Project One</h3>
-                <p>
-                    A short description of your first project.
-                </p>
-                <a href="Projects/project1.html" target="_blank" class="project-btn">View Project</a>
+            <div class="project-tab-panel personal-projects" role="tabpanel">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.png" alt="Project One Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project One</h3>
+                        <p>
+                            A short description of your first project.
+                        </p>
+                        <a href="Projects/project1.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.png" alt="Project Two Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Two</h3>
+                        <p>A short description of your second personal project.</p>
+                        <a href="Projects/project2.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Project3.png" alt="Project Three Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Three</h3>
+                        <p>A short description of your third personal project.</p>
+                        <a href="Projects/project3.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Project4.png" alt="Project Four Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Four</h3>
+                        <p>A short description of your fourth personal project.</p>
+                        <a href="Projects/project4.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Project5.png" alt="Project Five Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Five</h3>
+                        <p>A short description of your fifth personal project.</p>
+                        <a href="Projects/project5.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Project6.png" alt="Project Six Screenshot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Six</h3>
+                        <p>A short description of your sixth personal project.</p>
+                        <a href="Projects/project6.html" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-        </div>
+            <div class="project-tab-panel work-projects" role="tabpanel">
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>A short description of your second project.</p>
+                </div>
 
-        <div class="project-card">
-            <h3>Project Two</h3>
-            <p>A short description of your second project.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Project Three</h3>
-            <p>A short description of your third project.</p>
+                <div class="project-card">
+                    <h3>Project Three</h3>
+                    <p>A short description of your third project.</p>
+                </div>
+            </div>
         </div>
     </section>
 
